@@ -23,7 +23,7 @@ This project let you see a list of users with their data included and each one o
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/Bavly001/angular-static-laptop-store-page-.git
+   git clone https://github.com/Bavly001/angular-users-web-application.git
    ```
 2. Install NPM packages
    ```sh
