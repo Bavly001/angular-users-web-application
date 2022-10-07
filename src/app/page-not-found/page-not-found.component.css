@@ -1,0 +1,10 @@
+.frame{
+      height: 630px;
+}
+.frame .img-frame{
+      height: 440px;
+}
+.frame .img-frame img{
+      filter: invert(1) saturate(45);
+      
+}

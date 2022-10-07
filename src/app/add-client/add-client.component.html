@@ -1,0 +1,36 @@
+<div class="vh-100 d-flex justify-content-center align-items-center flex-column">
+  <h1 class="display-3 text-center">Add Clients</h1>
+  <form [formGroup]="addClientForm" (ngSubmit)="addNewClient();" class="container w-50 my-5" novalidate>
+
+    <input type="text" class="form-control my-3" formControlName="firstName" id="firstName" 
+      placeholder="Please, Enter your first name" autocomplete="off">
+
+    <input type="text" class="form-control my-3" formControlName="maidenName" id="maidenName" 
+      placeholder="Please, Enter your maiden name" autocomplete="off">
+
+    <input type="text" class="form-control my-3" formControlName="lastName" id="lastName" 
+      placeholder="Please, Enter your last name" autocomplete="off">
+
+    <input type="number" onKeyPress="if(this.value.length==4) return false;" class="form-control my-3"
+      formControlName="age" id="age"  placeholder="Please, Enter your age" autocomplete="off">
+
+    <select class="form-select"  formControlName="gender">
+      <option selected value="">Choose your gender ...</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+
+    <input type="email" class="form-control my-3" formControlName="email" id="email" 
+      placeholder="Please, Enter your email address" autocomplete="off">
+
+    <div class="input-group my-3">
+      <span class="input-group-text">+20</span>
+      <input type="number"  onKeyPress="if(this.value.length==10) return false;" class="form-control"
+        placeholder="Please, Enter your phone number" formControlName="phone" autocomplete="off">
+    </div>
+
+    <input [disabled]="!addClientForm.valid" type="submit" class="btn btn-primary mt-3 w-100">
+    <h1 *ngIf="isSubmitted" class="display-6 bg-success py-2 w-50 d-block mx-auto text-light text-center fs-6 mt-3">Client is submitted successfully</h1>
+
+  </form>
+</div>

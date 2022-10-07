@@ -1,0 +1,6 @@
+header{
+      z-index: 1111111;
+}
+.navbar-collapse{
+      flex-grow: 0 !important;
+}

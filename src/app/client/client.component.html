@@ -1,0 +1,17 @@
+<div *ngFor="let client of clients" class="col d-flex justify-content-center align-items-center mb-3">
+  <div class="card border-top-0 text-start overflow-hidden">
+    <div class="card-container">
+      <img class="card-img-top d-block mx-auto mt-3" src="https://cdn-icons-png.flaticon.com/128/3237/3237472.png"
+        alt="Title">
+      <div class="card-body">
+        <h4 class="card-title">{{client.firstName + " " + client.lastName}}</h4>
+        <p class="card-text">{{"ID: " + client.id}}</p>
+        <p class="card-text">{{"Age: " + client.age}}</p>
+        <p class="card-text">{{"Gender: " + client.gender}}</p>
+        <p class="card-text">{{"Email: " + client.email}}</p>
+        <p class="card-text">{{"Phone: " + client.phone}}</p>
+        <button (click)="getProfile(client.id)" type="button" class="btn btn-primary">View Profile</button>
+      </div>
+    </div>
+  </div>
+</div>
